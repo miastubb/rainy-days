@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Bebas Neue', sans-serif;
-  background-color: #2F5327;
   color: #F8E6BF;
 }
 
@@ -10,95 +9,177 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1rem;
   background-color: #2F5327;
-  height: 80px;
   position: relative;
 }
-
-
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  padding: 0;
-}
-
-
-.Header-logo {
-  height: 50px;
-  width: auto;
-  max-width: 150px;
-}
-
 
 .nav-left {
   display: flex;
   gap: 10px;
   margin-right: auto;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  letter-spacing: 3px;
-  text-shadow: black 1px 1px 3px;
-
-
 }
 
-.fas,
-.far,
-.fab {
-  color: #F8E6BF;
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .nav-right {
-  margin-left: auto;
+  justify-content: space-between;
   font-family: 'Bebas Neue', sans-serif;
   text-shadow: black 1px 1px 3px;
   font-size: 24px;
   letter-spacing: 3px;
   gap: 10px;
   display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
+.nav-right {
+  flex-wrap: nowrap;
+}
 
-.nav-button {
-  text-decoration: none;
-  padding: 8px 16px;
+.icon-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.Header-logo {
+  height: clamp(40px, 5vw, 60px);
+  max-width: 150px;
+}
+
+.nav-button,
+.back-button,
+.btn-jacket {
+  padding: clamp(6px, 1vw, 10px) clamp(12px, 2vw, 24px);
   background-color: #2F5327;
   color: #F8E6BF;
   border-radius: 100px;
-  font-size: 24px;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   border: 1px solid rgba(248, 230, 191, 0.3);
+  text-decoration: none;
   transition: all 0.3s ease;
   white-space: nowrap;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
 }
 
-.nav-button:hover {
+.btn-container {
+  display: flex;
+  gap: clamp(20px, 5vw, 100px);
+  margin-top: clamp(30px, 5vh, 60px);
+  margin-bottom: clamp(60px, 10vh, 100px);
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn-jacket {
+  border: 1px solid rgba(248, 230, 191, 0.9);
+}
+
+
+.nav-button:hover,
+.btn-jacket:hover {
   background-color: #3a6431;
   transform: translateY(-1px);
 }
 
-.Header-logo {
-  height: 60px;
+.desktop-only {
+  display: block;
 }
 
-.nav-button {
-  padding: 2px 20px;
-  font-size: 24px;
+.mobile-only {
+  display: none;
 }
 
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/*mobile first start*/
+
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+  top: 28px;
+  z-index: 10;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background: #F8E6BF;
+}
+
+.mobile-shop-btn {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 65vh;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 12px 24px;
+  background: #2F5327;
+  color: #F8E6BF;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/*backgrounds*/
 .home-page {
-  background-image: url("Foss.jpg");
+  background-image: url("images/Foss.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
 }
 
 .shop-page {
-  background-image: url("Gaustatoppen.jpg");
-  background-size: cover;
+  background-image: url("images/Gaustatoppen.jpg");
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+}
+
+@media (max-width:1024px) {
+  .home-page {
+    background-image: url("images/gvepseborg.jpg");
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    background-image: url("images/dronningstien.jpg");
+  }
 }
 
 main {
@@ -108,75 +189,24 @@ main {
   align-items: center;
 }
 
-.btn-container {
-  display: flex;
-  gap: 400px;
-  margin-top: 30px;
-  margin-bottom: 100px;
-  justify-content: center;
-  width: 100%;
-}
-
-.btn-jacket {
-  padding: 10px 24px;
-  background-color: #2F5327;
-  color: #F8E6BF;
-  border-radius: 100px;
-  text-decoration: none;
-  font-family: 'Bebas Neue', sans-serif;
-  border: 1px solid rgba(248, 230, 191, 0.9);
-  transition: all 0.3s ease;
-  letter-spacing: 3px;
-  text-shadow: black 1px 1px 3px;
-  font-size: 20px;
-}
-
-.btn-jacket:hover {
-  background-color: #3a6431;
-  transform: translateY(-1px);
-}
-
-h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 36px;
+.home-page main h1 {
+  margin-top: clamp(100px, 25vh, 200px);
+  margin-bottom: 10px;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: #F8C659;
-  margin-top: 160px;
-  margin-bottom: 7px;
   letter-spacing: 0.9px;
 }
 
-p {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
+.home-page main p {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   color: #ffffff;
   text-shadow: black 1px 0.5px 0.5px;
-  margin-top: 1px;
   letter-spacing: 0.7px;
   margin-left: 20px;
 }
 
-.indented {
-  display: inline-block;
-  margin-left: 30px;
-
-}
-
-.indent {
-  display: inline-block;
-  margin-left: 0px;
-  margin-right: 25px;
-}
-
-.indent-deeper {
-  display: inline-block;
-  margin-left: 130px;
-}
-
-.indent-deepest {
-  display: inline-block;
-  margin-left: 110px;
-}
-
+/*footer*/
 footer {
   background-color: #2F5327;
   color: #F8E6BF;
@@ -190,7 +220,6 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 999;
-
 }
 
 .footer-container {
@@ -208,15 +237,11 @@ footer {
   text-align: center;
 }
 
-.footer-column h3 {
-  font-size: 1rem;
-  margin: 1rem;
-}
-
+.footer-column h3,
 .footer-column p,
 .footer-column a {
-  font-size: 1rem;
-  margin: 2px 0;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin: 4px 0;
   color: #F8E6BF;
   text-decoration: none;
 }
@@ -232,6 +257,7 @@ footer {
 .social-links a i {
   font-size: 1rem;
   transition: transform 0.3s ease;
+  color: #F8E6BF;
 }
 
 .social-links a:hover i {
