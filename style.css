@@ -263,3 +263,58 @@ footer {
 .social-links a:hover i {
   transform: scale(1.2);
 }
+
+/*styling for mens jackets*/
+.background-section {
+  padding: 20px;
+  margin-top: 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(47, 83, 39, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.item {
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #F8E6BF;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.item-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-top: 10px 0;
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+
+}
+
+.item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
