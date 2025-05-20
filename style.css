@@ -12,6 +12,7 @@ body {
   padding: 1rem;
   background-color: #2F5327;
   position: relative;
+  z-index: 2;
 }
 
 .nav-left {
@@ -100,22 +101,26 @@ body {
 }
 
 @media (max-width: 768px) {
-  .desktop-only {
-    display: none;
+  .shop-page::after {
+    top: calc(100% - 30vh);
+    height: 40vh;
   }
 
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  position: absolute;
-  left: 20px;
-  top: 28px;
-  z-index: 10;
+  .desktop-only {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    left: 20px;
+    top: 28px;
+    z-index: 10;
+  }
 }
 
 .hamburger-menu span {
@@ -152,13 +157,8 @@ body {
   min-height: 100vh;
 }
 
-.shop-page {
-  background-image: url("images/Gaustatoppen.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  min-height: 100vh;
-}
+/*mens_jackets background failsafe*/
+
 
 @media (max-width:1024px) {
   .home-page {
@@ -252,4 +252,133 @@ footer {
 
 .social-links a:hover i {
   transform: scale(1.2);
+}
+
+/*mens_jackets*/
+.shop-page {
+  background: none;
+  position: relative;
+  min-height: 100vh;
+}
+
+body.shop-page {
+  padding-top: 0;
+}
+
+.shop-page::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background-image: url("images/Gaustatoppen.jpg");
+  background-size: 100% auto;
+  background-position: center bottom;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+body.shop-page {
+  background-color: #A7B3A4;
+  padding-top: 0;
+}
+
+.background-section {
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #A7B3A4;
+}
+
+.content-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  width: 98%;
+  max-width: 1400px;
+  background-color: #A7B3A4;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  flex: 1 1 300px;
+  text-align: center;
+  background-color: #F8E6BF;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  flex: 0 0 auto;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.item h3 {
+  color: #2F5327;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+.item p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.price-button {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 12px;
+  background-color: #F8C659;
+  color: #2F5327;
+  border-radius: 100px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+}
+
+.price-button:hover {
+  background-color: #2F5327;
+  color: #F8E6BF;
+  transform: translateY(-2px);
+}
+
+.price-button.active {
+  background-color: #2F5327;
+  color: #F8C659;
+}
+
+.price-button sale {
+  position: relative;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  color: white;
+  overflow: hidden;
+  padding-right: 50px;
+}
+
+/*product page start*/
+.product-description {
+  background-color: #A7B3A4;
 }
