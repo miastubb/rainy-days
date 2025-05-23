@@ -162,12 +162,15 @@ body {
 @media (max-width:1024px) {
   .home-page {
     background-image: url("images/gvepseborg.jpg");
+    background-size: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .home-page {
     background-image: url("images/dronningstien.jpg");
+    background-size: cover;
+    background-position: left 50% bottom 80px top left;
   }
 }
 
