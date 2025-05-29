@@ -34,30 +34,30 @@
 
   <main class="checkout-page">
     <div class="checkout-container">
-
-      <div class="form-column">
-        <h2>Shipping Details</h2>
-        <form class="checkout-form">
+   
+    <div class="form-column">
+      <div class="form-sections-container">
+      
+        <div class="form-section">
+          <h2>Shipping Details</h2>
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Your full name" required>
           </div>
-
           <div class="form-group">
             <label for="address">Address</label>
             <input type="text" id="address" name="address" placeholder="Street address" required>
           </div>
-
           <div class="form-group">
             <label for="zip">ZIP Code</label>
             <input type="text" id="zip" name="zip" placeholder="12345" required>
           </div>
-
           <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
           </div>
-
+        </div>
+        <div class="form-section">
           <h3>Delivery Method</h3>
           <div class="form-group">
             <label><input type="radio" name="delivery" value="click" checked> Click & Collect (Free)</label><br>
@@ -70,23 +70,23 @@
             <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
             <label><input type="radio" name="payment" value="bank"> Bank Transfer</label>
           </div>
-        </form>
-      </div>
-
-      <div class="summary-column">
-        <h2>Your Order</h2>
-        <div class="summary-item">
-          <img src="images/bobcat-lightweight.png" alt="Bobcat Lightweight" class="summary-image">
-          <div class="summary-details">
-            <h3>Bobcat Lightweight</h3>
-            <p>$249.00</p>
-          </div>
         </div>
-        <button class="purchase-btn">Pay Now</button>
       </div>
-
     </div>
-  </main>
+
+    <div class="summary-column">
+      <h2>Your Order</h2>
+      <div class="summary-item">
+        <img src="images/bobcat-lightweight.png" alt="Bobcat Lightweight" class="summary-image">
+        <div class="summary-details">
+          <h3>Bobcat Lightweight</h3>
+          <p>$249.00</p>
+        </div>
+      </div>
+      <a href="confirmation.html" class="purchase-btn">Pay Now</a>
+    </div>
+  </div>
+</main>
 
   <footer>
     <div class="footer-container">
