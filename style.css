@@ -853,3 +853,53 @@ main {
   }
 
 }
+
+/*start of confirmation page*/
+body.process {
+  background-color: #A7B3A4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmation-box {
+  background-color: #F8E6BF;
+  color: #2F5327;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.confirmation-box h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.confirmation-box p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.home-button {
+  background-color: #2F5327;
+  color: #F8E6BF;
+  border: none;
+  padding: 12px 60px;
+  font-size: 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.home-button:hover {
+  background-color: #25441e;
+}
