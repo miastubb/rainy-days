@@ -780,3 +780,76 @@ main {
     max-width: 200px;
   }
 }
+
+/*start of processing page*/
+.process {
+  background-color: #A7B3A4;
+}
+
+.process-header {
+  height: 50px;
+  justify-content: center;
+}
+
+.process-animation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border-top-color: #1F5327;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.processing-text {
+  font-size: 1.5rem;
+  color: #1F5327;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 80%;
+  max-width: 300px;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: #1F5327;
+  animation: progress 2.5s ease-in-out infinite;
+}
+
+/*keyframes*/
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+
+}
