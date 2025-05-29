@@ -412,6 +412,11 @@ body.product-description {
   padding: 0;
 }
 
+h2 {
+  color: #1F5327;
+  letter-spacing: 3px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -549,31 +554,60 @@ main {
 
 .checkout-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  gap: 40px;
-  background-color: #2F5327;
+  gap: 20px;
+  background-color: #A7B3A4;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: #F8E6BF 2px solid;
+}
+
+.form-sections-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #F8E6BF;
+  padding: 20px;
+  border-radius: 8px;
+  color: #2F5327;
+  padding-right: 40px;
 }
 
 .form-column {
-  flex: 1;
+  flex: 2;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form {
+  display: flex;
+  gap: 30px;
+}
+
+.checkout-form>div {
+  flex: 1;
 }
 
 .summary-column {
-  flex: 0 0 350px;
+  flex: 0 0 200px;
   background-color: #F8E6BF;
   padding: 25px;
   border-radius: 8px;
   color: #2F5327;
+  letter-spacing: 3px;
+
 }
 
 .checkout-form h2,
 .checkout-form h3 {
-  color: #F8C659;
+  color: #2F5327;
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 1px;
   margin: 20px 0 15px;
@@ -597,7 +631,7 @@ main {
   display: block;
   margin-bottom: 8px;
   font-family: 'Bebas Neue', sans-serif;
-  color: #F8C659;
+  color: #2F5327;
   letter-spacing: 1px;
   font-size: 1.1rem;
 }
@@ -665,36 +699,41 @@ main {
 
 .summary-details p {
   font-size: 1.2rem;
-  color: #d4762e;
+  color: #954000;
 }
 
 .purchase-btn {
+  display: inline-block;
   width: 100%;
-  padding: 15px;
+  max-width: 100px;
+  padding: clamp(10px, 2vw, 16px) clamp(20px, 4vw, 40px);
   background-color: #F8C659;
   color: #2F5327;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid rgba(248, 230, 191, 0.3);
+  border-radius: 100px;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   letter-spacing: 2px;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  margin: 0 auto;
 }
 
 .purchase-btn:hover {
-  background-color: #3a6431;
+  background-color: #2F5327;
   color: #F8E6BF;
   transform: translateY(-2px);
 }
 
 /* Responsive Styles */
 @media (max-width: 900px) {
-  .checkout-container {
+  .form-sections-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .form-column {
@@ -703,6 +742,26 @@ main {
 
   .summary-column {
     flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .form-column,
+  .summary-column {
+    width: 100%;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+  }
+
+  .summary-column {
+    margin-top: 20px;
+    padding: 20px;
+    overflow-x: hidden;
   }
 }
 
