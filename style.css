@@ -573,10 +573,14 @@ main {
 .form-section {
   flex: 1;
   background-color: #F8E6BF;
-  padding: 20px;
+  padding: 10px 40px 10px 10px;
   border-radius: 8px;
   color: #2F5327;
   padding-right: 40px;
+}
+
+.form-group {
+  margin-bottom: 16px;
 }
 
 .form-column {
@@ -645,7 +649,7 @@ main {
   border-radius: 5px;
   background-color: #F8E6BF;
   font-family: sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: #333;
   transition: all 0.3s ease;
 }
@@ -664,7 +668,7 @@ main {
 .form-group label {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   cursor: pointer;
 }
 
