@@ -15,15 +15,25 @@ body {
   z-index: 2;
   min-height: 40px;
 }
+
+.icon-wrapper i {
+  margin-top: 11px;
+  vertical-align: middle;
+
+}
+
 .hamburger-menu {
   display: none;
 }
+
 .desktop-only {
   display: flex;
 }
+
 .mobile-only {
   display: none;
 }
+
 .nav-left {
   display: flex;
   gap: 10px;
@@ -48,6 +58,7 @@ body {
   flex-shrink: 0;
   white-space: nowrap;
 }
+
 .nav-left .nav-right {
   display: flex;
 }
@@ -127,7 +138,7 @@ body {
 
 
 
-  .desktop-only {
+.desktop-only {
   display: flex;
 }
 
@@ -180,7 +191,7 @@ main {
   text-shadow: black 1px 0.5px 0.5px;
   letter-spacing: 0.7px;
   margin-left: 20px;
-   background-color: rgba(248, 230, 191, 0.7);
+  background-color: rgba(248, 230, 191, 0.7);
 }
 
 .home-page main h1 {
@@ -189,7 +200,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-   background-color: rgba(246, 246, 246, 0.7);
+  background-color: rgba(246, 246, 246, 0.7);
 }
 
 /*footer*/
@@ -267,7 +278,7 @@ body.shop-page {
   left: 0;
   width: 100%;
   height: 60vh;
- 
+
   background-size: 100% auto;
   background-position: center bottom;
   z-index: -1;
@@ -366,12 +377,19 @@ body.shop-page {
   color: #F8C659;
 }
 
-.price-button sale {
+.price-button.sale {
   position: relative;
-  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-  color: white;
+  background-color: #F8E6BF;
+  color: #2F5327;
+  transition: all 0.3s ease;
   overflow: hidden;
   padding-right: 50px;
+}
+
+.price-button.sale:hover,
+.price-button.sale:active {
+  background-color: #2F5327;
+  color: #F8E6BF;
 }
 
 /*product page start*/
@@ -806,23 +824,41 @@ body.process {
   text-decoration: none;
 }
 
+body.construction-page {
+  background-color: #A7B3A4;
+}
+
+body.construction-page h1 {
+  font-size: 3rem;
+  margin-top: 200px;
+}
+
+a,
+a:visited {
+  color: #F8E6BF;
+  text-decoration: none;
+}
+
 .home-button:hover {
   background-color: #25441e;
 }
+
 @media (max-width:1024px) {
-  .home-page{
+  .home-page {
     background-image: url("images/gvepseborg.jpg");
     background-size: 100%;
     background-size: cover;
     background-position: center;
-   
-    }
-    body.home-page main .text-wrapper h1 {
-      color: #1F5327;
-      text-shadow: 1px 1px 2px rgba(248, 230, 191, 0.7);
-      background-color: rgba(248, 230, 191, 0.7);
-    }
-    body.home-page main .text-wrapper p {
+
+  }
+
+  body.home-page main .text-wrapper h1 {
+    color: #1F5327;
+    text-shadow: 1px 1px 2px rgba(248, 230, 191, 0.7);
+    background-color: rgba(248, 230, 191, 0.7);
+  }
+
+  body.home-page main .text-wrapper p {
     color: #2F5327;
     text-shadow: 1px 1px 2px rgba(248, 230, 191, 0.7);
     background-color: rgba(248, 230, 191, 0.7);
@@ -831,6 +867,7 @@ body.process {
     display: inline-block;
   }
 }
+
 @media (max-width: 900px) {
   .form-sections-container {
     flex-direction: column;
@@ -845,6 +882,7 @@ body.process {
     flex: 1;
   }
 }
+
 @media (max-width: 768px) {
   .home-page {
     background-image: url("images/dronningstien.jpg");
@@ -852,33 +890,41 @@ body.process {
     background-position: left 50% bottom -80px;
   }
 }
+
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+
   .desktop-only {
     display: none;
   }
+
   .mobile-only {
     display: block;
   }
+
   .site-header {
     padding: 0.5rem;
     min-height: 60px;
   }
+
   .home-page {
     background-image: url("images/dronningstien.jpg");
     background-position: left 50% bottom -80px;
   }
 }
+
 @media (max-width: 768px) {
   .shop-page::after {
     top: calc(100% - 30vh);
     height: 40vh;
-  }}
-  @media (max-width: 768px) {
+  }
+}
+
+@media (max-width: 768px) {
 
   .content-box {
     flex-direction: column;
@@ -891,6 +937,7 @@ body.process {
     width: 90%;
     max-width: 300px;
   }
+
   .shop-page::after {
     background-size: cover;
     height: 40vh;
@@ -904,6 +951,7 @@ body.process {
   .icon-wrapper {
     display: flex;
   }
+
   .site-header {
     padding: 1rem 0.5rem;
   }
@@ -920,6 +968,7 @@ body.process {
     margin-right: 0;
   }
 }
+
 @media (max-width: 768px) {
   .product-container {
     flex-direction: column;
@@ -945,6 +994,7 @@ body.process {
     text-align: center;
   }
 }
+
 @media (max-width: 768px) {
   .checkout-container {
     flex-direction: column;
@@ -964,6 +1014,7 @@ body.process {
     overflow-x: hidden;
   }
 }
+
 @media (max-width: 768px) {
   .desktop-only {
     display: none;
@@ -982,16 +1033,18 @@ body.process {
   }
 }
 
-@media (max-width:549px){
- .nav-right {
+@media (max-width:549px) {
+  .nav-right {
     display: none;
   }
 }
+
 @media (max-width: 550px) {
   .checkout-container {
     padding: 20px;
   }
-body.checkout-page .site-header {
+
+  body.checkout-page .site-header {
     display: flex;
     padding: 1rem;
     position: relative;
@@ -999,7 +1052,7 @@ body.checkout-page .site-header {
   }
 
   body.checkout-page .nav-left {
-    position: relative; 
+    position: relative;
     left: 0;
     margin: 0;
     z-index: 3;
@@ -1011,10 +1064,12 @@ body.checkout-page .site-header {
     transform: translateX(-50%);
     width: 120px;
   }
+
   .summary-item {
     flex-direction: column;
     text-align: center;
   }
+
   .summary-image {
     width: 80%;
     max-width: 200px;
@@ -1042,4 +1097,18 @@ body.checkout-page .site-header {
     flex: 1 1 50%;
     margin-bottom: 10px;
   }
+}
+
+/* SALE BUTTON COLOR FLIP */
+.price-button.sale {
+  background-color: #F8C659;
+  color: #2F5327;
+  border: 2px solid #2F5327;
+  transition: all 0.3s ease;
+}
+
+.price-button.sale:hover,
+.price-button.sale:active {
+  background-color: #2F5327;
+  color: #F8C659;
 }
