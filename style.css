@@ -377,20 +377,6 @@ body.shop-page {
   color: #F8C659;
 }
 
-.price-button.sale {
-  position: relative;
-  background-color: #F8E6BF;
-  color: #2F5327;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  padding-right: 50px;
-}
-
-.price-button.sale:hover,
-.price-button.sale:active {
-  background-color: #2F5327;
-  color: #F8E6BF;
-}
 
 /*product page start*/
 
@@ -833,8 +819,8 @@ body.construction-page h1 {
   margin-top: 200px;
 }
 
-a,
-a:visited {
+.icon-wrapper a,
+.icon-wrapper a:visited {
   color: #F8E6BF;
   text-decoration: none;
 }
@@ -1110,5 +1096,5 @@ a:visited {
 .price-button.sale:hover,
 .price-button.sale:active {
   background-color: #2F5327;
-  color: #F8C659;
+  color: #F8E6BF;
 }
