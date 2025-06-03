@@ -42,6 +42,7 @@ body {
   .desktop {
     display: none !important;
   }
+
   .mobile-only {
     display: block !important;
   }
