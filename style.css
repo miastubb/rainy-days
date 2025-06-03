@@ -1109,6 +1109,11 @@ body.construction-page h1 {
   }
 }
 
+@media (max-width: 600px) {
+  .footer-container {
+    display: none;
+  }
+}
 
 @media (max-width:549px) {
   .nav-right {
