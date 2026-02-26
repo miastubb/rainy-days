@@ -4,6 +4,25 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   color: #F8E6BF;
 }
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  padding: 10px 14px;
+  background: #F8E6BF;
+  color: #2F5327;
+  border-radius: 8px;
+  z-index: 9999;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  outline: 3px solid #F8C659;
+  outline-offset: 2px;
+}
+
 
 .site-header {
   display: flex;
